@@ -1,0 +1,107 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.active {
+  background-color: #eee;
+}
+
+body {
+  background: #fff url('../images/linen.png');
+  color: #4d4d4d;
+  margin: 0 auto;
+}
+
+#header {
+  padding: 7px 0px 7px 0px;
+  border-radius: inherit;
+  border-bottom:1px solid #ccc;
+  color: #FCFCFC;
+  background-color: #A1B1CF;
+  position: relative;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,50,.5);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,50,.5);
+}
+
+#header #wrapper {
+  margin: 0 auto;
+  position: absolute;
+  top: 30px;
+  right: 10%;
+}
+
+#logo {
+  height: 75px;
+  width: 75px;
+  float: left;
+  padding: 5px 5px;
+}
+
+#header h1 {
+  font: 36px "Oswald", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 3px;
+  text-decoration: none;
+
+}
+
+#byline {
+  padding-left: 10px;
+}
+
+
+#header #nav {
+
+}
+
+#header #nav li {
+  display: inline-block;
+}
+
+#header #nav li a {
+  text-transform: uppercase;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+table {
+  font-size: 20px;
+}
+
+
+#bev {
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+}
+
+#bev img {
+  position: relative;
+  padding:20px;
+  border:1px solid #ccc;
+  background-color:#fff;
+  z-index:0;
+  -webkit-transform: scale(.75);
+  -moz-transform: scale(.75);
+  -webkit-transition: -webkit-transform .15s linear;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+}
+#bev img:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+}
+#meow {
+  position: absolute;
+  top: 400px;
+  left: 150px;
+  opacity: 0;
+  font-size: 48px;
+  color: white;
+  z-index:1;
+}

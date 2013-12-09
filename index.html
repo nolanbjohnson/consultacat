@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head id="header">
+	<title>Consult a Cat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+	<script type="text/x-handlebars">
+	<section id="consultacat">
+	<header id="header">
+		<a class="brand" href="">
+			<img src="images/logo.png" id="logo">
+		</a>
+		<h1>Consult a Cat</h1>
+		<span id="byline"><strong>>> </strong><em>life&#39;s big questions deserve cat answers!</em></span>
+			<div id="wrapper">
+				<ul id="nav" class="nav nav-pills">
+					<li>{{#link-to 'about'}}about{{/link-to}}</li>
+					<li>{{#link-to 'consults'}}cat consults (5){{/link-to}}</li>
+					<li><a href="">cat advice (3)</a></li>
+				</ul>
+			</div>
+	</header>
+		{{outlet}}
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="main">
+	<div id="main">
+			<div id="bev">
+		  <p id="meow">Meow!</p>
+		  <img src="images/bev.png">
+		</div>
+	</div>
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="about">
+		<div class="about">
+			<p>this is the about section</p>
+		</div>
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="consults">
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span4">
+					<table class="table table-hover">
+						<thead>
+							<tr><th>Cat Consults</th></tr>
+						</thead>
+						  {{#each}}
+						  <tr><td>
+						    {{title}} <small class="muted">by Bev</small>
+							</td></tr>
+						  {{/each}}
+					</table>
+				</div>
+				<div class="span8">
+					{{outlet}}
+				</div>
+			</div>
+		</div>
+	</script>
+	<script src="js/libs/jquery-1.10.2.min.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
+  <script src="js/libs/ember.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+	<script src="js/libs/bootstrap.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+	
+  <script src="js/application.js"></script>
+	<script src="js/router.js"></script>
+	<script src="js/models/consult.js"></script>
+
+	<script src="js/bev.js"></script>
+
+</body>
+</html>
